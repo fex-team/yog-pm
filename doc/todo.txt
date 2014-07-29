@@ -1,16 +1,8 @@
-1. 尝试shell脚本的功能使用
+6. pm2 原生命令的提供
 
-3. 采用api接口扩展pm2，而非执行shell命令
+    对于非扩展命令直接命令行执行pm2
 
-    1. pm2全局安装解决方案
-
-        是否可以解决 ： 代码or文档
-
-2. 替换exec、grep等命令采用shelljs代替 ： https://github.com/arturadib/shelljs
-
-4. 是否需要增加crontab功能
-
-5. 增加init功能
+7. 尝试promise干掉复杂的嵌套错误处理
 
 —————————————后续—————————————————————————
 

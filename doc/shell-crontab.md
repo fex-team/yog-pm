@@ -9,9 +9,9 @@
 
 #### 需要修改的变量
 
-1. json=/home/work/repos/pm-demo/pm_demo.json  ``指定spm2配置文件路径``
+1. json=/home/work/repos/pm-demo/pm_demo.json  ``指定yogPm配置文件路径``
 2. node_bin=/home/work/.jumbo/bin/node   ``指定node可执行路径``
-3. spm2_bin=/home/work/repos/pm-demo/node_modules/yog-pm/bin/yog-pm    ``指定yog-pm 执行路径``
+3. yogPm_bin=/home/work/repos/pm-demo/node_modules/yog-pm/bin/yog-pm    ``指定yog-pm 执行路径``
 
 #### 返回值
 

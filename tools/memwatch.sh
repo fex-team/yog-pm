@@ -2,9 +2,9 @@
 
 json=/home/work/repos/pm-demo/pm_demo.json
 node_bin=/home/work/node/bin
-spm2_bin=/home/work/repos/pm-demo/node_modules/yog-pm/bin/yog-pm
+yogPm_bin=/home/work/repos/pm-demo/node_modules/yog-pm/bin/yog-pm
 
-result=`$node_bin $spm2_bin memwatch $json -s 52`
+result=`$node_bin $yogPm_bin memwatch $json -s 52`
 die=`echo $result | grep -c -e "not exist" -e "getMonitorData error"`
 if [ $die -gt 0 ];then
     #出错，返回-1

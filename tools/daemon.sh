@@ -2,9 +2,9 @@
 
 json=/home/work/repos/pm-demo/pm_demo.json
 node_bin=/home/work/node/bin
-spm2_bin=/home/work/repos/pm-demo/node_modules/yog-pm/bin/yog-pm
+yogPm_bin=/home/work/repos/pm-demo/node_modules/yog-pm/bin/yog-pm
 
-result=`$node_bin $spm2_bin daemon $json`
+result=`$node_bin $yogPm_bin daemon $json`
 
 succ=`echo $result | grep -c -w "everything is ok"`
 if [ $succ -gt 0 ]; then

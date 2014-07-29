@@ -37,19 +37,18 @@ pm2提供了[startup](https://github.com/Unitech/pm2#startup-script)功能利用
 $ ypm daemon /home/wangcheng/demo/pm2-pro.json
 ```
 
-### 配置
+###init : 初始化pm2的配置文件
 
-为了能够利用node的易安装特点，yog-pm支持非全局安装的pm2和node，需要在pm2的配置文件中指定pm2和node的安装目录。
+生成pm2的配置文件模版，支持dev和pro两种模式。
+生成的只是一个模版，请根据具体情况修改模版文件。
 
-* pm2_bim : 指定pm2的安装目录，不指定默认为全局安装
-* node_bin : 指定node的安装目录，不指定默认为全局安装
+```sh
+$ ypm init -env dev #生成pm2配置文件
+```
 
-        [{
-            "name" : "pm_app",
-            "script"  : "examples/args.js",
-            "pm2_bin" : "/home/users/***/pm2/bin"
-            "node_bin" : "/home/users/***/node/bin"
-        }]
+###yog-pm配置
+
+* yogPm_log : 配置yog-pm运行生成的log的位置目录，每个命令独立一个log文件
 
 ### 配合crontab命令
 

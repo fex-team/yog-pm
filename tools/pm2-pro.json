@@ -1,13 +1,10 @@
-[
-	{
-		"name" : "yd-node",
-		"script" : "/home/users/wangcheng/wenku-node/base/server.js",
-		"exec_mode" : "cluster_mode",
-		"instances" : "max",
-		"bin" : "/home/users/wangcheng/wenku-node/base/node_modules/.bin",
-		"error_file" : "./log/child-err.log",
-    	"out_file"   : "./log/child-out.log",
-    	"pid_file"   : "./log/child.pid",
-    	"merge_logs" : "true"
-	}
-]
+{
+    "name" : "app-name",
+    "script" : "server path",
+    "exec_mode" : "cluster_mode",
+    "instances" : "max",
+    "error_file" : "./log/child-err.log",
+    "out_file"   : "./log/child-out.log",
+    "pid_file"   : "./log/child.pid",
+    "merge_logs" : "true"
+}
