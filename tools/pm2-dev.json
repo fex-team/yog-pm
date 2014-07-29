@@ -1,0 +1,10 @@
+[
+	{
+		"name" : "yd-node-dev",
+		"script" : "/home/users/wangcheng/wenku-node/base/server.js",
+		"watch" : true,
+        "exec_mode" : "cluster_mode",
+        "instances" : "max",
+		"ignoreWatch" : ["node_modules", "static", "views"]
+	}
+]
