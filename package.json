@@ -1,6 +1,6 @@
 {
   "name": "yog-pm",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "yog-pm",
   "main": "yog-pm.js",
   "dependencies": {
