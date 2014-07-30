@@ -11,7 +11,7 @@ Object.defineProperty(global, 'yogPm', {
 //先后顺序一定不要打乱
 yogPm.util = require(__dirname + "/lib/util.js");
 yogPm.log = require(__dirname + "/lib/log.js");
-
+yogPm.pm2 = require(__dirname + "/lib/pm2.js");
 
 yogPm.cli = {};
 yogPm.cli.name = "fis-pm";
