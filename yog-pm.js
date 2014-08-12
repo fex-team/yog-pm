@@ -13,6 +13,17 @@ yogPm.util = require(__dirname + "/lib/util.js");
 yogPm.log = require(__dirname + "/lib/log.js");
 yogPm.pm2 = require(__dirname + "/lib/pm2.js");
 
+//对外提供api接口
+yogPm.fn = {};
+
+require("fs").readdirSync(__dirname + "/lib/command").forEach(function(f){
+    if(f.match(/\.js$/)){
+        var command = require(__dirname + "/lib/command/" + f),
+            name = f.replace(/\.js$/, "");
+        yogPm.fn[name] = command[name];
+    }
+});
+
 yogPm.cli = {};
 yogPm.cli.name = "fis-pm";
 yogPm.cli.commander = null;
@@ -37,7 +48,7 @@ yogPm.cli.run = function(argv){
         yogPm.cli.help();
     } else {
         var commander = yogPm.cli.commander = require('commander');
-        var cmd = require('./lib/' + first + '.js');
+        var cmd = require('./lib/command/' + first + '.js');
         cmd.registry(
             commander
                 .command(cmd.name || first)
