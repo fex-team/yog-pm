@@ -40,7 +40,7 @@ $ ypm daemon /home/wangcheng/demo/pm2-pro.json
 ###init : 初始化pm2的配置文件
 
 生成pm2的配置文件模版，支持dev和pro两种模式。
-生成的只是一个模版，请根据具体情况修改模版文件。
+生成的只是一个模版，需要指定name和script。
 
 ```sh
 $ ypm init -env dev #生成pm2配置文件
