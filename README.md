@@ -13,7 +13,7 @@ $ npm install -g yog-pm
 
 ###startOrReload ： 启动pm2服务
 
-服务没有启动时start服务，服务已经启动则会reload。
+服务没有启动时start服务，服务已经启动则会reload。解决了多个用户同时运行pm2时，日志文件修改权限报错问题。
 
 ```sh
 $ ypm startOrReload /home/wangcheng/demo/pm2-pro.json #利用pm2-pro.json文件启动引用
