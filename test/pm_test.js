@@ -1,11 +1,11 @@
 
 var pm2 = require("../node_modules/pm2");
-var shelljs = require("../node_modules/shelljs");
 
-shelljs.config.fatal = true;
 
-console.log(shelljs.env);
-
-var pm2Dir = shelljs.env["HOME"] + "/.pm2";
-
-shelljs.chmod("-R", 777, pm2Dir);
+pm2.connect(function(){
+    pm2.list(function(err, process_list){
+        for(var i=0; i<process_list.length; i++){
+            console.log(process_list[i]["pm2_env"]["status"]);
+        }
+    });
+});
